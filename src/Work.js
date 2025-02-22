@@ -7,7 +7,14 @@ function Work() {
 
       <div className="work-container bd-grid">
         <div className="work-img">
+          {/* hover text*/}
+          
           <img src="https://i.postimg.cc/NM0n9bsm/work1.jpg" alt="image" />
+          <div className="work-hover">
+            <h3>Project 1</h3>
+            <p>Project 1 description</p>
+            <a href="#" className="button">View Project</a>
+            </div>
         </div>
 
         <div className="work-img">

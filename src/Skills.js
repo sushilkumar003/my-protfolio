@@ -98,7 +98,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <img src="/myimage.jpg" alt="Profile" className="skills-img" />
+          <img src="/full1.jpeg" alt="Profile" className="skills-img" />
         </div>
       </div>
     </section>
