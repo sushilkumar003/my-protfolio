@@ -9,7 +9,8 @@ function Work() {
         <div className="work-img">
           {/* hover text*/}
           
-          <img src="https://i.postimg.cc/NM0n9bsm/work1.jpg" alt="image" />
+          <img src="./bank.jpg" alt="image" style={{marginTop:"19px"}}  />
+          <strong>Bank website</strong>
           <div className="work-hover">
             <h3>Project 1</h3>
             <p>Project 1 description</p>
@@ -18,19 +19,23 @@ function Work() {
         </div>
 
         <div className="work-img">
-          <img src="https://i.postimg.cc/tJZmDTVg/work2.jpg" alt="image" />
+          <img src="./shoping.jpg" alt="image" style={{marginTop:"19px"}} /> 
+          <strong>Shoping website </strong>
         </div>
 
         <div className="work-img">
-          <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image" />
+          <img src="./cal.jpg" alt="image" />
+          <strong>calculator</strong>
         </div>
 
         <div className="work-img">
-          <img src="https://i.postimg.cc/fW1wsSCB/work4.jpg" alt="image" />
+          <img src="JavaScriptQuiz.jpg" alt="image" />
+          <strong>JavaScriptQuiz</strong>
         </div>
 
         <div className="work-img">
-          <img src="https://i.postimg.cc/m2MTgZ6R/work5.jpg" alt="image" />
+          <img src="turist.jpg" alt="image" />
+          <strong>himachal pradesh tourist tour </strong>
         </div>
 
         <div className="work-img">
