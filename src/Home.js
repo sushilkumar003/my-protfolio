@@ -11,7 +11,7 @@ const Home = () => {
       <div className="home-social">
         <a href="#" className="home-social-icon"><i className='bx bxl-linkedin'></i></a>
         <a href="#" className="home-social-icon"><i className='bx bxl-instagram'></i></a>
-        <a href="#" className="home-social-icon"><i className='bx bxl-github'></i></a>
+        <a href="https://github.com/sushilkumar003" className="home-social-icon"><i className='bx bxl-github'></i></a>
       </div>
 
       <div className="home-img">

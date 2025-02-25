@@ -1,48 +1,90 @@
-import React from 'react';
+import React, { useState } from "react";
+import "./Work.css"; // Make sure to add styles
+
+const projects = [
+  {
+    id: 1,
+    title: "Himachal Pradesh Tour",
+    img: "turist.jpg",
+    details: "A tourism guide for Himachal Pradesh.",
+    github: "https://github.com/sushilkumar003/himachal-pradesh",
+  },
+  {
+    id: 2,
+    title: "Bank Website",
+    img: "./bank.jpg",
+    details: "A modern banking website with online transaction features.",
+    github: "https://github.com/sushilkumar003/banksite",
+  },
+  {
+    id: 3,
+    title: "Shopping Website",
+    img: "./shoping.jpg",
+    details: "An e-commerce site with product listings and cart functionality.",
+    github: "https://github.com/sushilkumar003/ShoppingSite",
+  },
+  {
+    id: 4,
+    title: "Calculator",
+    img: "./cal.jpg",
+    details: "A simple calculator built with React.",
+    github: "https://github.com/sushilkumar003/calculator",
+  },
+  {
+    id: 5,
+    title: "JavaScript Quiz",
+    img: "JavaScriptQuiz.jpg",
+    details: "A quiz game built using JavaScript.",
+    github: "https://github.com/sushilkumar003/QuizGame.js",
+  },
+  
+  {
+    id: 6,
+    title: "Add to Cart",
+    img: "AddToCart.jpg",
+    details: "A shopping cart feature for e-commerce websites.",
+    github: "https://github.com/sushilkumar003/AddToCart",
+  },
+];
 
 function Work() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <section className="work section" id="work">
       <h2 className="section-title">Work</h2>
 
       <div className="work-container bd-grid">
-        <div className="work-img">
-          {/* hover text*/}
-          
-          <img src="./bank.jpg" alt="image" style={{marginTop:"19px"}}  />
-          <strong>Bank website</strong>
-          <div className="work-hover">
-            <h3>Project 1</h3>
-            <p>Project 1 description</p>
-            <a href="#" className="button">View Project</a>
-            </div>
-        </div>
-
-        <div className="work-img">
-          <img src="./shoping.jpg" alt="image" style={{marginTop:"19px"}} /> 
-          <strong>Shoping website </strong>
-        </div>
-
-        <div className="work-img">
-          <img src="./cal.jpg" alt="image" />
-          <strong>calculator</strong>
-        </div>
-
-        <div className="work-img">
-          <img src="JavaScriptQuiz.jpg" alt="image" />
-          <strong>JavaScriptQuiz</strong>
-        </div>
-
-        <div className="work-img">
-          <img src="turist.jpg" alt="image" />
-          <strong>himachal pradesh tourist tour </strong>
-        </div>
-
-        <div className="work-img">
-          <img src="https://i.postimg.cc/Qd3h9LR7/work6.jpg" alt="image" />
-        </div>
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="work-img"
+            onClick={() => setSelectedProject(project)}
+          >
+            <img src={project.img} alt={project.title} style={{ marginTop: "19px" }} />
+            <strong>{project.title}</strong>
+          </div>
+        ))}
       </div>
+
+      {selectedProject && (
+        <Popup project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
+  );
+}
+
+function Popup({ project, onClose }) {
+  return (
+    <div className="popup-overlay" onClick={onClose}>
+      <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+        <button className="close-btn" onClick={onClose}>×</button>
+        <img src={project.img} alt={project.title} className="popup-img" />
+        <h2>{project.title}</h2>
+        <p>{project.details}</p>
+        <a href={project.github} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ const Footer = () => {
         <a href="#" className="footer-icon"><i className='bx bxl-twitter'></i></a>
       </div>
 
-      <p>&#169; 2024 Copyright all rights reserved</p>
+      <p>&#169; 2025 Copyright all rights reserved</p>
     </footer>
   );
 };
